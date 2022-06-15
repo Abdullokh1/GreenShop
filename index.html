@@ -4,20 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
+    <title>GreenShop</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
   </head>
 
   <body>
+    
+    <!-- HEADER START  -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div>
+            <a href="#">
+              <img src="images/main-logo.svg" alt="main-logo">
+            </a>
+          </div>
+          <div>
+            <ul class="nav">
+              <li class="nav__item active">
+                <a class="nav__link " href="#">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Shop</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Plant Care</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Blogs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <button class="header__btns">
+              <i class='bx bx-search'></i>
+            </button>
+            <button class="header__btns">
+              <img src="images/addCard.svg" alt="addCard" width="24" height="24">
+              <span class="header__card-count">6</span>
+            </button>
+            <button class="header__btns">
+              <img class="me-1" src="images/logout.svg" alt="logout">
+              Login
+            </button>
+          </div>
+
+        </div>
+      </div>
+        
+    </header>
+
     <script src="js/main.js"></script>
   </body>
 </html>
