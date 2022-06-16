@@ -1,0 +1,136 @@
+.hero{
+  margin-bottom: 46px;
+}
+
+.hero__inner{
+  height: 450px;
+  background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+  padding: 68px 43px;
+  position: relative;
+}
+
+.hero__info{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.hero__title{
+  font-weight: 900;
+  font-size: 70px;
+  text-transform: uppercase;
+  line-height: 70px;
+  margin-bottom: 5px;
+}
+
+.hero__green-title{
+  color: $primary-color;
+}
+
+.hero__text{
+  color: $text-color;
+  width: 550px;
+  font-size: 14px;
+  margin-bottom: 44px;
+}
+
+.hero__link{
+  background-color: #46a358;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px 27px;
+  transition: all 0.4s ease;
+
+  &:hover{
+    outline: 1px solid $primary-color;
+    color: $primary-color;
+    background-color: transparent;
+  }
+}
+
+.hero__img{
+  object-fit: cover;
+}
+
+.carousel-item::after{
+  content: '';
+  width: 0px;
+  height: 0px;
+}
+
+
+.slide{
+  @include list-unstyled;
+  position: absolute;
+  bottom: 18px;
+  left: 45%;
+}
+
+.slide__icon{
+  width: 8px;
+  height: 8px;
+  background-color: rgba(70, 163, 88, 0.3);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+
+  &:hover{
+    background-color: $primary-color;
+  }
+}
+
+.slide-active{
+  background-color: $primary-color;
+}
+
+
+@media screen and (max-width: 1210px) {
+
+  .hero__text{
+    width: 100%;
+  }
+  
+  .hero__title{
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .hero__img{
+    width: 400px;
+  }
+  
+}
+
+@media screen and (max-width: 780px) {
+  .hero__inner{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 550px;
+  }
+
+  .hero__img{
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero__text{
+    margin-bottom: 30px;
+    font-size: 13px;
+  }
+
+  .slide{
+    bottom: 5px;
+  }
+
+  .hero{
+    padding: 0 10px;
+  }
+
+  .hero__title{
+    font-size: 30px;
+  }
+}

@@ -17,14 +17,15 @@
 .nav__item {
   cursor: pointer;
   position: relative;
+
   &:not(:last-child){
     margin-right: 50px;
   }
-
+  
   &:hover .nav__link{
     -webkit-text-stroke: 1px $title-color;
   }
-
+  
   &::after{
     content: "";
     width: 0%;
@@ -34,12 +35,26 @@
     position: absolute;
     bottom: -26px;
     left: 0;
+    transition: all 0.4s ease;
   }
-
+  
   &:hover::after{
     width: 100%;
   }
-  
+}
+
+.nav__link {
+  color: $text-color;
+  padding-bottom: 20px;
+}
+
+.nav__link-act{
+  font-weight: 700;
+  color: $title-color;
+
+  &:hover{
+    font-weight: 200;
+  }
 }
 
 .active{
@@ -50,12 +65,14 @@
     background-color: $primary-color;
     display: inline-block;
   }
-  -webkit-text-stroke: 1px black;
 }
 
-.nav__link {
-  color: $text-color;
-  padding-bottom: 20px;
+.header__menu{
+  display: none;
+  
+  i{
+    font-size: 30px;
+  }
 }
 
 .header__btns{
@@ -63,27 +80,48 @@
   display: flex;
   align-items: center;
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  
+  i{
+    transition: all 0.3s ease;
+  }
+
+  img{
+    transition: all 0.3s ease;
+  }
+
+  i:hover{
+    transform: scale(1.1);
+  }
 
   &:hover{
     color: $primary-color;
+
+    img{
+      transform: scale(1.1);
+    }
   }
 
   &:nth-child(2){
-    margin-right: 35px;
+    margin-right: 25px;
   }
 
-  &:last-child{
+  &:nth-child(3){
     background-color: $primary-color;
     padding: 8px 20px;
     color: #fff;
     border-radius: 6px;
 
     &:hover{
-      background-color: #1e5429;
+      outline: 1px solid $primary-color;
+      color: $primary-color;
+      background-color: transparent;
+
+      img{
+        filter: invert(48%) sepia(100%) saturate(2476%) hue-rotate(86deg) brightness(90%) contrast(119%);
+      }
     }
   }
- 
 }
 
 .header__card-count{
@@ -101,4 +139,41 @@
   font-size: 12px;
   font-weight: bold;
   color: #fff;
+}
+
+@media screen and (max-width: 1010px) {
+  .nav__item{
+    margin-right: 10px !important;
+  }
+
+  .nav{
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  .header{
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .nav{
+    display: none !important;
+  }
+
+  .header{
+    padding: 20px 10px;
+  }
+  
+  .header__btns{
+    padding: 0 10px;
+
+    &:nth-child(2){
+      margin-right: 10px;
+    }
+
+    &:nth-child(3){
+      display: none;
+    }
+  }
 }
