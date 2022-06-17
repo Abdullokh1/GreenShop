@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="fonts/stylesheet.css">
   <link rel="stylesheet" href="css/main.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+  <link rel="icon" href="images/green-icon.svg" />
 </head>
 
 <body>
@@ -60,42 +61,79 @@
 
   <!-- HEADER END  -->
 
+  <!-- HERO START  -->
+
   <section class="hero">
     <div class="container">
-      <div class="hero__inner d-flex align-items-center">
-        <div>
-          <p class="hero__info">Welcome to GreenShop</p>
-          <h1 class="hero__title">Let’s Make a Better <span class="hero__green-title">Planet</span></h1>
-          <p class="hero__text">We are an online plant shop offering a wide range of cheap and trendy plants. Use our
-            plants to create an unique Urban Jungle. Order your favorite plants!</p>
-          <a class="hero__link" href="#">Shop Now</a>
-          <ul class="slide d-flex">
-            <li>
-              <button>
-                <span class="slide__icon"></span>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span class="slide__icon slide-active"></span>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span class="slide__icon"></span>
-              </button>
-            </li>
-          </ul>
+      <div id="carouselExampleIndicators" class="carousel slider carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active slider-btn" aria-current="true" aria-label="Slide 1">
+          </button>
+          <button class="slider-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2">
+          </button>
+          <button class="slider-btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3">
+          </button>
         </div>
-        <img class="hero__img" src="images/hero-img-1.png" alt="hero-img">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero__inner d-flex align-items-center">
+              <div>
+                <p class="hero__info">Welcome to GreenShop</p>
+                <h1 class="hero__title">Let’s Make a Better <span class="hero__green-title">Planet</span></h1>
+                <p class="hero__text">We are an online plant shop offering a wide range of cheap and trendy plants. Use
+                  our
+                  plants to create an unique Urban Jungle. Order your favorite plants!</p>
+                <a class="hero__link" href="#">Shop Now</a>
+              </div>
+              <img class="hero__img" src="images/hero-img-1.png" alt="hero-img" width="518" height="518">
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero__inner d-flex align-items-center">
+              <div>
+                <p class="hero__info">Welcome to GreenShop</p>
+                <h1 class="hero__title">Let’s Make a Better <span class="hero__green-title">Planet</span></h1>
+                <p class="hero__text">We are an online plant shop offering a wide range of cheap and trendy plants. Use
+                  our
+                  plants to create an unique Urban Jungle. Order your favorite plants!</p>
+                <a class="hero__link" href="#">Shop Now</a>
+              </div>
+              <img class="hero__img" src="images/flower-3.png" alt="flower-3" width="518" height="490">
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="hero__inner d-flex align-items-center">
+              <div>
+                <p class="hero__info">Welcome to GreenShop</p>
+                <h1 class="hero__title">Let’s Make a Better <span class="hero__green-title">Planet</span></h1>
+                <p class="hero__text">We are an online plant shop offering a wide range of cheap and trendy plants. Use
+                  our
+                  plants to create an unique Urban Jungle. Order your favorite plants!</p>
+                <a class="hero__link" href="#">Shop Now</a>
+              </div>
+              <img class="hero__img" src="images/flower-7.png" alt="flower-7" width="500" height="490">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- HERO END  -->
+
   <main>
+
+    <!-- PRODUCTS START  -->
+
     <section class="products">
       <div class="container">
-        <div class="d-flex">
+        <div class="products__inner d-flex">
           <div class="products__category col-3">
             <h4 class="products__title">Categories</h4>
             <ul class="products__list category">
@@ -146,18 +184,594 @@
               </li>
             </ul>
             <h4 class="products__title">Price Range</h4>
-            <input type="range">
+            <div class="products__range-wrapper">
+              <span class="products__range"></span>
+              <span class="products__thumb"></span>
+              <span class="products__thumb products__thumb--second"></span>
+            </div>
 
+            <p>Price: <span class="products__price">$39 - $1230</span></p>
+            <button class="products__btn">Filter</button>
+            <h4 class="products__title">Size</h4>
+
+            <ul class="products__list category">
+              <li class="products__item d-flex justify-content-between">
+                <h4 class="category__title">Small </h4>
+                <a class="category__link" href="#">(119)</a>
+              </li>
+
+              <li class="products__item d-flex justify-content-between">
+                <h4 class="category__title">Medium </h4>
+                <a class="category__link" href="#">(86)</a>
+              </li>
+
+              <li class="products__item d-flex justify-content-between">
+                <h4 class="category__title">Large</h4>
+                <a class="category__link" href="#">(78)</a>
+              </li>
+            </ul>
+
+            <img class="products__img" src="images/product-ad.png" alt="product-ad">
           </div>
 
-          <div class="col-9">
+          <div class="products__cards-part col-9">
+            <div class="products__filter-wrap d-flex">
+              <ul class="products__filter d-flex">
 
+                <li class="products__filter-act">
+                  <a class="products__all-act" href="#">All Plants</a>
+                </li>
+
+                <li>
+                  <a href="#">New Arrivals</a>
+                </li>
+
+                <li>
+                  <a href="#">Sale</a>
+                </li>
+              </ul>
+
+              <div class="products__select-wrapper d-flex align-items-center">
+                <p class="m-0 me-2">Short By:</p>
+                <select class="products__select">
+                  <option value="Default">Default sorting</option>
+                  <option value="Default">New Arrivals</option>
+                  <option value="Default">Sale</option>
+                </select>
+              </div>
+            </div>
+            <div class="products__cards-wrapper cards">
+
+              <ul class="cards__list">
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-1.png" alt="flower-1">
+                    <span class="cards__link-text"> Barberton Daisy</span>
+                    <span class="cards__link-span">$119.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-2.png" alt="flower-2">
+                    <span class="cards__link-text">Angel Wing Begonia</span>
+                    <span class="cards__link-span">$169.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-3.png" alt="flower-3">
+                    <span class="cards__link-text"> African Violet</span>
+                    <div class="d-flex">
+                      <span class="cards__link-span me-3">$199.000</span>
+                      <span class="cards__link-span discount-text">$229.00</span>
+                    </div>
+
+                    <span class="cards__link-discount">13% OFF</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-4.png" alt="flower-4" height="280">
+                    <span class="cards__link-text"> Beach Spider Lily</span>
+                    <span class="cards__link-span">$129.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-5.png" alt="flower-5">
+                    <span class="cards__link-text">Blushing Bromeliad</span>
+                    <span class="cards__link-span">$139.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-6.png" alt="flower-6">
+                    <span class="cards__link-text">Aluminum Plant</span>
+                    <span class="cards__link-span">$179.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-7.png" alt="flower-7">
+                    <span class="cards__link-text"> Bird's Nest Fern</span>
+                    <span class="cards__link-span">$99.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-8.png" alt="flower-8">
+                    <span class="cards__link-text">Broadleaf Lady Palm</span>
+                    <span class="cards__link-span">$59.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="cards__item">
+                  <a class="cards__link" href="#">
+                    <img class="cards__link-img" src="images/flower-9.png" alt="flower-9">
+                    <span class="cards__link-text">Chinese Evergreen</span>
+                    <span class="cards__link-span">$39.00</span>
+                  </a>
+                  <div class="cards__link-products link">
+                    <ul class="link__products-list d-flex align-items-center justify-content-between">
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <img src="images/addCard.svg" alt="addCard">
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-heart'></i>
+                        </a>
+                      </li>
+                      <li class="link__products-item">
+                        <a class="link__products-link" href="#">
+                          <i class='bx cards__icon bx-search'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pagination-wrapper d-flex justify-content-end">
+              <div class="pagination d-flex">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button><img src="images/right-arrow.svg" alt="right-arrow"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__advertise d-flex justify-content-between">
+          <div class="products__information">
+            <div class="products__main d-flex">
+              <img class="products__flower" src="images/flower-5.png" alt="flower-5">
+              <div class="products__info-wrapper">
+                <h4 class="products__ad-title">Summer cactus & succulents</h4>
+                <p class="products__ad-text">We are an online plant shop offering a wide range of cheap and trendy
+                  plants</p>
+                <a class="products__more hero__link" href="#">
+                  Find More
+                  <i class='bx products__right-arrow bx-right-arrow-alt'></i>
+                </a>
+              </div>
+              <img class="products__ornament" src="images/left-ornament.svg" alt="left-ornament">
+            </div>
+          </div>
+
+          <div class="products__information">
+            <div class="products__main d-flex">
+              <img class="products__flower" src="images/flower-3.png" alt="flower-3">
+              <div class="products__info-wrapper">
+                <h4 class="products__ad-title">Styling Trends & much more</h4>
+                <p class="products__ad-text">We are an online plant shop offering a wide range of cheap and trendy
+                  plants</p>
+                <a class="products__more hero__link" href="#">
+                  Find More
+                  <i class='bx products__right-arrow bx-right-arrow-alt'></i>
+                </a>
+              </div>
+              <img class="products__ornament" src="images/left-ornament.svg" alt="left-ornament">
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- PRODUCTS END  -->
+
+
+    <!-- BLOG START  -->
+
+    <section class="blog">
+      <div class="container">
+        <div class="text-center">
+          <h3 class="blog__info-title">Our Blog Posts</h3>
+          <p class="blog__text">We are an online plant shop offering a wide range of cheap and trendy plants. </p>
+        </div>
+
+        <ul class="blog__list d-flex">
+          <li class="blog__item">
+            <div class="blog__img-wrapper">
+              <img class="blog__img" src="images/blog-img-1.png" alt="blog-img-1">
+            </div>
+            <div class="blog__wrapper">
+              <p class="blog__date">September 12 I Read in 6 minutes</p>
+              <h4 class="blog__title">Cactus & Succulent Care Tips</h4>
+              <p class="blog__text">Cacti are succulents are easy care plants for any home or patio. </p>
+              <a class="blog__link" href="#">
+                Read More
+                <i class='bx blog__icon bx-right-arrow-alt'></i>
+              </a>
+            </div>
+          </li>
+
+          <li class="blog__item">
+            <div class="blog__img-wrapper">
+              <img class="blog__img" src="images/blog-img-2.png" alt="blog-img-2">
+            </div>
+            <div class="blog__wrapper">
+              <p class="blog__date">September 13 I Read in 2 minutes</p>
+              <h4 class="blog__title">Top 10 Succulents for Your Home</h4>
+              <p class="blog__text">Best in hanging baskets. Prefers medium to high light.</p>
+              <a class="blog__link" href="#">
+                Read More
+                <i class='bx blog__icon bx-right-arrow-alt'></i>
+              </a>
+            </div>
+          </li>
+
+          <li class="blog__item">
+            <div class="blog__img-wrapper">
+              <img class="blog__img" src="images/blog-img-3.png" alt="blog-img-3">
+            </div>
+            <div class="blog__wrapper">
+              <p class="blog__date">September 15 I Read in 3 minutes</p>
+              <h4 class="blog__title">Cacti & Succulent <br> Care Tips</h4>
+              <p class="blog__text">Cacti and succulents thrive in containers and because most are..</p>
+              <a class="blog__link" href="#">
+                Read More
+                <i class='bx blog__icon bx-right-arrow-alt'></i>
+              </a>
+            </div>
+          </li>
+
+          <li class="blog__item">
+            <div class="blog__img-wrapper">
+              <img class="blog__img" src="images/blog-img-4.png" alt="blog-img-4">
+            </div>
+            <div class="blog__wrapper">
+              <p class="blog__date">September 15 I Read in 2 minutes</p>
+              <h4 class="blog__title">Best Houseplants Room by Room</h4>
+              <p class="blog__text">The benefits of houseplants are endless. In addition to..</p>
+              <a class="blog__link" href="#">
+                Read More
+                <i class='bx blog__icon bx-right-arrow-alt'></i>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOG END  -->
+
+
+    <!-- NEWSLETTER START  -->
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__main d-flex">
+          <ul class="newsletter__list news d-flex ">
+            <li class="news__item">
+              <img src="images/news-img-1.svg" alt="news-img-1">
+              <h4 class="news__title">Garden Care</h4>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+            </li>
+
+            <li class="news__item">
+              <img src="images/news-img-2.svg" alt="news-img-2">
+              <h4 class="news__title">Plant Renovation</h4>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+            </li>
+
+            <li class="news__item">
+              <img src="images/news-img-3.svg" alt="news-img-3">
+              <h4 class="news__title">Watering Graden</h4>
+              <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+            </li>
+
+            <li class="news__item">
+              <h4 class="news__messege">Would you like to join newsletters?</h4>
+              <form class="news__email-wrap d-flex">
+                <input type="email" name="email" placeholder="enter your email address">
+                <button type="submit">Join</button>
+              </form>
+              <p class="news__text">We usually post offers and challenges in newsletter. We’re your online houseplant
+                destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house
+                to yours! </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="newsletter__address">
+          <div class="d-flex justify-content-between newsletter__inner">
+            <div>
+              <a href="#">
+                <img src="images/main-logo.svg" alt="main-logo">
+              </a>
+            </div>
+            
+            <div class="d-flex align-items-center">
+              <img src="images/location.svg" alt="location">
+              <a class="newsletter__location m-0 ms-3" href="#">70 West Buckingham Ave.
+                Farmingdale, NY 11735</a>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <img src="images/message.svg" alt="message">
+              <a class="newsletter__location m-0 ms-2" href="mailto:">contact@greenshop.com</a>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <img src="images/phone.svg" alt="phone">
+              <a class="newsletter__location m-0 ms-2" href="tel:23232">+88 01911 717 490</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER END  -->
+
   </main>
 
+  <!-- FOOTER START  -->
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__inner">
+        <ul class="footer__list d-flex">
+
+          <li>
+            <h4>My Account</h4>
+            <ul class="footer__nav">
+              <li><a href="#">My Account</a></li>
+              <li><a href="#">Our stores</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Specials</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Help & Guide</h4>
+            <ul class="footer__nav">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">How to Buy</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Product Policy</a></li>
+              <li><a href="#">How to Return</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Categories</h4>
+            <ul class="footer__nav">
+              <li><a href="#">House Plants</a></li>
+              <li><a href="#">Potter Plants</a></li>
+              <li><a href="#">Seeds</a></li>
+              <li><a href="#">Small Plants</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4 class="footer__social-title">Social Media</h4>
+            <ul class="footer__nav social-media d-flex">
+              <li>
+                <a href="#">
+                  <i class='bx bxl-facebook'></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class='bx bxl-instagram'></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class='bx bxl-twitter'></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class='bx bxl-linkedin'></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class='bx bxl-youtube'></i>
+                </a>
+              </li>
+            </ul>
+            <h4 class="footer__social-title">We accept</h4>
+            <a href="#"><img src="images/payment.svg" alt="payment"></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer__copywrite text-center">© 2021 GreenShop. All Rights Reserved.</p>
+  </footer>
+
+  <!-- FOOTER END  -->
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
